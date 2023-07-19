@@ -1,12 +1,39 @@
 {
-  "name": "lemmy-web-component",
-  "version": "1.0.0",
+  "name": "@lemmy/web-components",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/lemmy-thread.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tybalt build components/LemmyThread/lemmy-thread.ts",
+    "test": "tybalt test",
+    "lint": "tybalt lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "type": "module",
+  "keywords": [
+    "lemmy"
+  ],
+  "author": "Douglas Wade <douglas.b.wade@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lemmy-js-client": "^0.18.3-rc.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.27",
+    "@storybook/addon-links": "^7.0.27",
+    "@storybook/blocks": "^7.0.27",
+    "@storybook/web-components": "^7.0.27",
+    "@storybook/web-components-vite": "^7.0.27",
+    "@tybalt/cli": "^0.0.12",
+    "@tybalt/core": "^0.0.12",
+    "@tybalt/test-utils": "^0.0.12",
+    "@tybalt/validator": "^0.0.12",
+    "@types/jest": "^29.5.3",
+    "lit": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.27",
+    "vite": "^4.0.0"
+  }
 }
